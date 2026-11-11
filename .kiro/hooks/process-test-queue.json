@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Parse queued test documents",
+      "trigger": "PostFileCreate",
+      "description": "When a new document lands in the pipeline queue, remind the agent to run the parsing workflow.",
+      "matcher": "pipeline[\\\\/]jobs[\\\\/][^\\\\/]+[\\\\/]meta\\.json$",
+      "action": {
+        "type": "agent",
+        "prompt": "У черзі пайплайна з'явився новий документ. Виконай `node server/cli.mjs queue`, потім `node server/cli.mjs start <jobId>` і розбери документ за правилами steering-файлу test-parser-pipeline.md: analysis.md → parts/NNN.json по частинах → assemble (чернетка) → assemble --final."
+      }
+    }
+  ]
+}

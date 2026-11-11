@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Підсвітка маркером із документа (Word highlight → <mark class="hl-…">). */
+mark { background-color: #fef08a; color: inherit; border-radius: 2px; padding: 0 1px; }
+mark.hl-green { background-color: #bbf7d0; }
+mark.hl-cyan { background-color: #a5f3fc; }
+mark.hl-magenta { background-color: #f5d0fe; }
+mark.hl-blue { background-color: #bfdbfe; }
+mark.hl-red { background-color: #fecaca; }
+mark.hl-lightGray { background-color: #e5e7eb; }
+mark.hl-darkGray { background-color: #9ca3af; }

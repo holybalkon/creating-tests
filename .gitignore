@@ -1,0 +1,8 @@
+node_modules
+dist
+*.tsbuildinfo
+
+# Pipeline runtime artifacts (keep folder structure via .gitkeep)
+pipeline/jobs/*
+pipeline/_legacy/
+!pipeline/**/.gitkeep
